@@ -10,41 +10,44 @@ function addDots(){
 };
 
 function loaded(){
-
     //Hover
+    var curText = 'none';
+    var overText= 'none';
     var add = null;
     var addStr = ''
     var curText = $('.item h3').text();
     var prevWidth = ($('#body').css('width'));
-    console.log(prevWidth)
-    $('.item p').hover(
+    
+    $('.item').hover(
         function(){
-            
-            curText = $(this).text();
-            $('#preview').animate({
-                width: prevWidth,
-            },420);
             $(this).css({
                 'transform':'rotate(-5deg)',
                 'text-decoration': 'underline'
-            });
-            
-            addStr = '#h_'+$(this).attr('id')
-            add = $(addStr).clone()
-            console.log(add)
-            $('#preview').append(add);
+            });     
     },function(){
-        curText = $(this).text();
         $(this).css({
             'transform':'rotate(0deg)',
             textDecoration: 'none'
         });
-        $('#preview').animate({
-            width:0,
-        },320,function(){
+    });
+
+    $('.item').mousedown(
+        function(){
+            $(this).css({
+                'transform':'rotate(0deg)',
+                textDecoration: 'none',
+                'font-size':'2em',
+
+            });
+    });
+    
+    $('.item').mouseup(
+        function(){
+            $(this).css({
+                'font-size': '1em'
+
+            });
             
-            $('#preview').empty();
-        });
     });
     
 
