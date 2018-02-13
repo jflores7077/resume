@@ -61,8 +61,7 @@
   color: black;
   width: 80vw;
   height: 80vh;
-  background: rgba(54, 223, 172, 0);
-  border: 2px solid black; }
+  background: rgba(54, 223, 172, 0); }
 
 #b_cont {
   width: 0px;
@@ -76,5 +75,12 @@
   width: 100vw;
   height: 100vh;
   display: flex; }
+
+.b_p {
+  position: absolute;
+  background: rgba(171, 171, 171, 0.5);
+  width: 80vw;
+  height: 80vh;
+  top: -180vh; }
 
 /*# sourceMappingURL=main.css.map */

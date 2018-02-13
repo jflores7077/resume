@@ -12,12 +12,11 @@ function addDots(){
 function loaded(){
     //Hover
     var curText = 'none';
-    var overText= 'none';
     var add = null;
     var addStr = ''
     var curText = $('.item h3').text();
     var prevWidth = ($('#body').css('width'));
-    
+    var isViewing = false;
     $('.item').hover(
         function(){
             $(this).css({
@@ -45,8 +44,28 @@ function loaded(){
         function(){
             $(this).css({
                 'font-size': '1em'
-
             });
+            curText = 'h_'+$(this).attr('id')
+
+            add = $('#'+curText).clone();
+            console.log(isViewing)
+            if(isViewing){
+                console.log('up')
+                $('#preview').animate({
+                    'top':'-180vh',
+                }, 600,function(){
+                    
+                    isViewing = false;
+                });
+
+            }else{
+                console.log('down')
+                $('#preview').html(add);
+                $(add).animate({
+                    'top':'0vh',
+                }, 600);
+            }
+            
             
     });
     
