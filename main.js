@@ -17,6 +17,7 @@ function loaded(){
     var curText = $('.item h3').text();
     var prevWidth = ($('#body').css('width'));
     var isViewing = false;
+    var cssWith = [];
     $('.item').hover(
         function(){
             $(this).css({
@@ -35,36 +36,61 @@ function loaded(){
             $(this).css({
                 'transform':'rotate(0deg)',
                 textDecoration: 'none',
-                'font-size':'2em',
 
             });
+
+            $('p', this).css({
+                'font-size':'2em',
+            })
     });
     
     $('.item').mouseup(
         function(){
-            $(this).css({
-                'font-size': '1em'
+            $('p', this).css({
+                'font-size': '1.05em'
             });
+            
             curText = 'h_'+$(this).attr('id')
-
             add = $('#'+curText).clone();
-            console.log(isViewing)
             if(isViewing){
-                console.log('up')
-                $('#preview').animate({
+                console.log(cssWith)
+                $('p', '#'+cssWith[i]).animate({
+                    'backgroundColor': 'rgba(100,1,1,0)',
+                    "width": "0rem",
+                },100);
+                cssWith = []
+                
+
+                $('p', this).animate({
+                    'backgroundColor': 'rgba(124,1,2,0.4)',
+                    "width": "5rem",
+                },400);
+                console.log('css:'+cssWith[0])
+                
+
+                $('#preview div').animate({
                     'top':'-180vh',
                 }, 600,function(){
                     
                     isViewing = false;
+                    
                 });
 
             }else{
-                console.log('down')
+                $('p', this).animate({
+                    'backgroundColor': 'rgba(124,1,2,0.4)',
+                    "width": "5rem",
+                },400);
+                console.log('down:'+add.attr('id'))
+                console.log('clicked:'+$(add).attr('id'))
                 $('#preview').html(add);
                 $(add).animate({
                     'top':'0vh',
                 }, 600);
+                isViewing = true;
+                cssWith.push($(this).attr('id'));
             }
+            
             
             
     });
