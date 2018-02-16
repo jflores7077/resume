@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif; }
+
+/**https://coolors.co/0a0908-22333b-eae0d5-c6ac8f-5e503f**/
+/*              body    ,   head        p*/
+#head {
+  background: #0A0908;
+  color: #EAE0D5;
+  height: 10vh;
+  width: 100vw; }
+  #head #h_flexThis {
+    display: flex; }
+  #head #h_name {
+    width: 40vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    transition: 0.75s; }
+    #head #h_name p {
+      text-align: center;
+      align-content: center;
+      align-self: center;
+      align-items: center; }
+  #head #h_name:before {
+    content: "";
+    position: absolute;
+    width: 40vw;
+    height: 4px;
+    bottom: 0px;
+    left: 0;
+    background: #0A0908;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s; }
+  #head #h_name:hover:before {
+    background-color: #96897b;
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); }
+  #head #h_name:hover {
+    transition: 0.1s;
+    background: #181613;
+    color: #d1baa2; }
+  #head #h_navbar {
+    display: flex;
+    width: 60vw; }
+    #head #h_navbar li {
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+      flex: 1;
+      transition: 0.75s; }
+    #head #h_navbar li:before {
+      content: "";
+      position: absolute;
+      width: calc( 60vw / 6);
+      height: 4px;
+      bottom: 0px;
+      background: #22333B;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s; }
+    #head #h_navbar li:hover:before {
+      background-color: #96897b;
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1); }
+    #head #h_navbar li:hover {
+      transition: 0.5s;
+      background: #181613;
+      color: #d1baa2; }
+
+#body {
+  background: #eae0d5;
+  width: 100vw; }
+  #body #splash {
+    height: 90vh; }
+  #body .b_p {
+    width: 100vw;
+    height: 100vh;
+    background: #C6AC8F; }
+
+/*# sourceMappingURL=main.css.map */

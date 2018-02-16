@@ -1,0 +1,116 @@
+*{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+/**https://coolors.co/0a0908-22333b-eae0d5-c6ac8f-5e503f**/
+/*              body    ,   head        p*/
+$bgColors: (#0A0908, #EAE0D5, #C6AC8F);
+$txtColors: (#EAE0D5);
+
+#head{
+    background: nth($bgColors, 1);
+    color:nth($txtColors, 1);
+    height: 10vh;
+    width: 100vw;
+
+    #h_flexThis{
+        display: flex;
+    }
+    #h_name{
+        width: 40vw;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        p{
+            text-align: center;
+            align-content: center;
+            align-self: center;
+            align-items: center;
+
+        }
+        
+        
+        transition: 0.75s;
+    }
+    #h_name:before {
+        content: "";
+        position: absolute;
+        width: 40vw;
+        height: 4px;
+        bottom: 0px;
+        left: 0;
+        background: nth($bgColors, 1);
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+      }
+      
+      #h_name:hover:before {
+        background-color: lighten(nth($bgColors, 1),50%);
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+    #h_name:hover{
+        transition: 0.1s;
+        background: lighten(nth($bgColors, 1), 5%);
+        color: darken(nth($txtColors, 1), 15%);
+    }
+
+    #h_navbar{
+        display: flex;
+        width: 60vw;
+
+        li{
+            display: flex;
+            padding: 20px;
+            justify-content: center;
+            flex: 1;
+            transition: 0.75s;
+            
+        }
+        li:before {
+            content: "";
+            position: absolute;
+            width: calc( 60vw / 6);
+            height: 4px;
+            bottom: 0px;
+            background: #22333B;
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+          }
+          
+          li:hover:before {
+            background-color: lighten(nth($bgColors, 1),50%);
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+          }
+        li:hover{
+            transition: 0.5s;
+            background: lighten(nth($bgColors, 1), 5%);
+            color: darken(nth($txtColors, 1), 15%);
+        }
+    }
+}
+
+#body{
+    background: lighten(nth($bgColors, 2),0%);
+    width: 100vw;
+
+    #splash{
+        height: 90vh;
+    }
+    .b_p{
+        width: 100vw;
+        height: 100vh;
+        background: nth($bgColors, 3); 
+    }
+}
