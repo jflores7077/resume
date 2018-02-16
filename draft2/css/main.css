@@ -82,6 +82,8 @@
   width: 100vw; }
   #body #splash {
     height: 90vh; }
+    #body #splash * {
+      font-family: 'Indie Flower', cursive; }
   #body .b_p {
     width: 100vw;
     height: 100vh;

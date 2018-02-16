@@ -1,7 +1,7 @@
 /* Click about to acess a better "about" page */
 function readAbout(){
     var s = false;
-    $('#about').click(function(){
+    $('.items').click(function(){
         
         if(s){
             s= false;
@@ -34,11 +34,17 @@ function readAbout(){
         }
     });
 }
-/***********************************************/
+/*****************END FN readAbout******************************/
 
+/*Chaneg heading text */
+
+/*****************END FN changeHeadText******************************/
+
+//Once document has loaded
 $(document).ready(function(){
     //Reset document offset-y to 0
     $(this).scrollTop(0);
 
+    //Run functions
     readAbout();
 });
