@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poiret One', cursive;
+}
+$bg: (#ffffff);
+
+#body{
+    width: 100vw;
+    height: 100vh;
+    background: nth($bg, 1);
+    
+    #b_name{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        align-self: center;
+        #xavi{
+            display: flex;
+            align-content: center;
+            align-items: center;
+            align-self: center;
+        }
+    }
+}
