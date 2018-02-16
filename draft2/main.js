@@ -8,7 +8,10 @@ function readAbout(){
             $('html').css('overflow-y','hidden');
             $('html').animate({
                 'top':'0vh'
-            },800);
+            },800,function(){
+                
+                $('html').css('position','initial');
+            });
             
             $(this).css('flex','1')
             
