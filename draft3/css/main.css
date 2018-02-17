@@ -1,9 +1,41 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Poiret One', cursive; }
+  font-family: 'Poiret One', cursive;
+  overflow: hidden; }
 
-#body {
+#b_contact {
+  height: 10vh;
+  width: 100vw;
+  background: #c3bfbf; }
+  #b_contact nav {
+    color: white;
+    display: flex;
+    justify-content: center; }
+    #b_contact nav a {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      align-self: center;
+      padding: 20px;
+      font-size: 1.05em; }
+    #b_contact nav a:hover {
+      text-decoration: underline;
+      color: black; }
+
+#hidden {
+  display: none; }
+
+.circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #229933;
+  border-radius: 100%;
+  transition: 0.85s;
+  pointer-events: none; }
+
+#head {
   width: 100vw;
   height: 100vh;
   background: #ffffff;
@@ -12,14 +44,19 @@
   align-content: center;
   align-items: center;
   align-self: center;
-  flex-flow: column; }
-  #body #nav {
-    padding: 15px 10px; }
-    #body #nav a {
+  flex-flow: column;
+  transition: 1s; }
+  #head #xavi {
+    color: #000000; }
+  #head #navbar {
+    padding: 20px; }
+  #head #nav {
+    padding: 15px 50px; }
+    #head #nav a {
       padding: 5px 10px;
       border: 2px solid rgba(49, 49, 49, 0.2);
       transition: 0.75s; }
-    #body #nav a:hover {
+    #head #nav a:hover {
       border: 2px solid rgba(49, 49, 49, 0.7);
       padding: 5px 25px;
       transition: 0.25s; }

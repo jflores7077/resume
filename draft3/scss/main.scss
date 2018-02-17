@@ -2,10 +2,54 @@
     padding: 0;
     margin: 0;
     font-family: 'Poiret One', cursive;
+    overflow: hidden;
 }
 $bg: (#ffffff);
 
-#body{
+@function set-notification-text-color($color) {
+    @if (lightness($color) > 50) {
+      @return #000000; // Lighter backgorund, return dark color
+    } @else {
+      @return #ffffff; // Darker background, return light color
+    }
+}
+
+#b_contact{
+    height: 10vh;
+    width: 100vw;
+    background: #c3bfbf;
+    nav{
+        color: white;
+        display: flex;
+        justify-content: center;
+        a{
+            display: flex;
+            align-content: center;
+            align-items: center;
+            align-self: center;
+            padding: 20px;
+            font-size: 1.05em;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: black;
+        }
+        
+    }
+}
+#hidden{
+    display: none;
+}
+.circle{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border:2px solid #229933;
+    border-radius: 100%;
+    transition: 0.85s;
+    pointer-events: none;   
+}
+#head{
     width: 100vw;
     height: 100vh;
     background: nth($bg, 1);
@@ -15,8 +59,15 @@ $bg: (#ffffff);
     align-items: center;
     align-self: center;
     flex-flow: column;
+    transition: 1s;
+    #xavi{
+        color: set-notification-text-color(#ffffff);
+    }
+    #navbar{
+        padding: 20px;
+    }
     #nav{   
-        padding: 15px 10px;
+        padding: 15px 50px;
 
         a{
             padding: 5px 10px;
