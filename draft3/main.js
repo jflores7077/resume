@@ -49,10 +49,19 @@ $(document).ready(function(){
         var rgb = [Math.floor(Math.random() * 255) , Math.floor(Math.random() * 255) , Math.floor(Math.random() * 255) ]
         $('#head').css('background','rgb('+rgb[0]+','+rgb[1]+','+rgb[2]+')');
     })
+    $('#b_back').click(function(){
+        $('html').animate({
+            'top':'0vh'
+        },500);
+        
+        clickedList[0] = true;
+    })
     $('#nav a').click(function(){
         $('#head').css('background','#ffffff');
         if($(this).attr('id')=='h_cont'){
-
+            if($('#body').find( "#b_ab").attr('id')=='b_ab'){
+                $("#hidden").append($('#b_ab'))
+            }
             if(clickedList[1]){
                 clickedList[1] = false;
                 $('#body').append( $('#b_contact') );
@@ -60,9 +69,6 @@ $(document).ready(function(){
                 $('html').animate({
                     'top':'-10vh'
                 },500);
-
-                
-
             }else{
                 console.log(2)
                 $('html').animate({
@@ -71,6 +77,26 @@ $(document).ready(function(){
                 clickedList[1] = true;
             }
             
+        }
+        if($(this).attr('id')=='h_ab'){
+            if($('#body').find( "#b_contact").attr('id')=='b_contact'){
+                $("#hidden").append($('#b_contact'))
+            }
+
+            if(clickedList[0]){
+                clickedList[0] = false;
+                $('#body').append( $('#b_ab') );
+                $('html').css('position','absolute');
+                $('html').animate({
+                    'top':'-100vh'
+                },500);
+            }else{
+                console.log(2)
+                $('html').animate({
+                    'top':'0vh'
+                },500);
+                clickedList[0] = true;
+            }
         }
 
     });

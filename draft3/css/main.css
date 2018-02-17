@@ -27,13 +27,22 @@
   display: none; }
 
 .circle {
-  position: absolute;
+  position: fixed;
   width: 20px;
   height: 20px;
   border: 2px solid #229933;
   border-radius: 100%;
   transition: 0.85s;
   pointer-events: none; }
+
+#b_ab {
+  background: #313131; }
+  #b_ab #b_back {
+    width: 100vw;
+    height: 50vh;
+    background: #cf0202; }
+  #b_ab #info_ab {
+    color: red; }
 
 #head {
   width: 100vw;
@@ -45,9 +54,10 @@
   align-items: center;
   align-self: center;
   flex-flow: column;
-  transition: 1s; }
-  #head #xavi {
-    color: #000000; }
+  transition: 0.5s; }
+  #head h1 {
+    color: rgba(49, 49, 49, 0.2);
+    font-size: 2.5em; }
   #head #navbar {
     padding: 20px; }
   #head #nav {
@@ -55,11 +65,14 @@
     #head #nav a {
       padding: 5px 10px;
       border: 2px solid rgba(49, 49, 49, 0.2);
-      transition: 0.75s; }
+      transition: 0.75s;
+      font-size: 1em; }
     #head #nav a:hover {
       border: 2px solid rgba(49, 49, 49, 0.7);
       padding: 5px 25px;
       transition: 0.25s; }
+  #head #ideasp {
+    font-size: 0.9em; }
 
 #foot {
   height: 8vh;
